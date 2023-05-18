@@ -20,20 +20,20 @@ func_check(B),
 !.
 
 dop_func_menu :-
-writeln("\nВеберите с каким числом производить вычисления:"),
-writef("1 - Работа с положительным числом\n2 - Работа с отрицательным числом\n3 - Завершение работы\n").
+writeln("\nР’РµР±РµСЂРёС‚Рµ СЃ РєР°РєРёРј С‡РёСЃР»РѕРј РїСЂРѕРёР·РІРѕРґРёС‚СЊ РІС‹С‡РёСЃР»РµРЅРёСЏ:"),
+writef("1 - Р Р°Р±РѕС‚Р° СЃ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј\n2 - Р Р°Р±РѕС‚Р° СЃ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј\n3 - Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹\n").
 
 main_menu :-
-writeln("\nВыберите комманду из списка:"),
-writef("1 - Работа с семейным древом\n2 - Вычисление функции sh x\n3 - Завершение работы программы\n").
+writeln("\nР’С‹Р±РµСЂРёС‚Рµ РєРѕРјРјР°РЅРґСѓ РёР· СЃРїРёСЃРєР°:"),
+writef("1 - Р Р°Р±РѕС‚Р° СЃ СЃРµРјРµР№РЅС‹Рј РґСЂРµРІРѕРј\n2 - Р’С‹С‡РёСЃР»РµРЅРёРµ С„СѓРЅРєС†РёРё sh x\n3 - Р—Р°РІРµСЂС€РµРЅРёРµ СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹\n").
 
 fam_menu :-
-writeln("\nВыберите комманду из списка:"),
-writef("1 - Альфия мать Софьи?\n2 - Надежда не дочь Альфии?\n3 - Петр является отцом Максима и дедушкой Константина?\n4 - Дмитрий является отцом или дядей?\n5 - Кто является внуком Юлии?\n6 - Надежда старше 20 лет\n7 - Выход\n").
+writeln("\nР’С‹Р±РµСЂРёС‚Рµ РєРѕРјРјР°РЅРґСѓ РёР· СЃРїРёСЃРєР°:"),
+writef("1 - РђР»СЊС„РёСЏ РјР°С‚СЊ РЎРѕС„СЊРё?\n2 - РќР°РґРµР¶РґР° РЅРµ РґРѕС‡СЊ РђР»СЊС„РёРё?\n3 - РџРµС‚СЂ СЏРІР»СЏРµС‚СЃСЏ РѕС‚С†РѕРј РњР°РєСЃРёРјР° Рё РґРµРґСѓС€РєРѕР№ РљРѕРЅСЃС‚Р°РЅС‚РёРЅР°?\n4 - Р”РјРёС‚СЂРёР№ СЏРІР»СЏРµС‚СЃСЏ РѕС‚С†РѕРј РёР»Рё РґСЏРґРµР№?\n5 - РљС‚Рѕ СЏРІР»СЏРµС‚СЃСЏ РІРЅСѓРєРѕРј Р®Р»РёРё?\n6 - РќР°РґРµР¶РґР° СЃС‚Р°СЂС€Рµ 20 Р»РµС‚\n7 - Р’С‹С…РѕРґ\n").
 
 func_menu :-
-writeln("\nВыберите комманду из списка:"),
-writef("1 - Прямое вычисление функции\n2 - Вычисление функции по приближенной формуле \n3 - Сравнение реального значения и приближенного\n4 - Выход\n").
+writeln("\nР’С‹Р±РµСЂРёС‚Рµ РєРѕРјРјР°РЅРґСѓ РёР· СЃРїРёСЃРєР°:"),
+writef("1 - РџСЂСЏРјРѕРµ РІС‹С‡РёСЃР»РµРЅРёРµ С„СѓРЅРєС†РёРё\n2 - Р’С‹С‡РёСЃР»РµРЅРёРµ С„СѓРЅРєС†РёРё РїРѕ РїСЂРёР±Р»РёР¶РµРЅРЅРѕР№ С„РѕСЂРјСѓР»Рµ \n3 - РЎСЂР°РІРЅРµРЅРёРµ СЂРµР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ Рё РїСЂРёР±Р»РёР¶РµРЅРЅРѕРіРѕ\n4 - Р’С‹С…РѕРґ\n").
 
 func_check([Command]) :-
 Command = 1 ->( func_menu,
@@ -44,12 +44,12 @@ Command = 2 ->( func_menu,
 readln(A),
 func_check_neg(A), fail
 );
-Command = 3 -> writeln("Выход"), !.
+Command = 3 -> writeln("Р’С‹С…РѕРґ"), !.
 
 check([Command]) :-
 Command = 1 -> (fam, fail);
 Command = 2 -> (func, fail);
-Command = 3 -> writeln("Программа завершена").
+Command = 3 -> writeln("РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РµРЅР°").
 
 fam_check([Command]) :-
 Command = 1 -> (goal1, fail);
@@ -58,25 +58,25 @@ Command = 3 -> (goal3, fail);
 Command = 4 -> (goal4, fail);
 Command = 5 -> (goal5, fail);
 Command = 6 -> (goal6, fail);
-Command = 7 -> writeln("Выход"), !.
+Command = 7 -> writeln("Р’С‹С…РѕРґ"), !.
 
 func_check_pos([Command]) :-
 Command = 1 -> (
-writeln("Введите X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ X:"), readln(ListX), ListX = [X],
 start_func(X, Res),
-format("X = ~w. Функция = ~w", [X, Res]),
+format("X = ~w. Р¤СѓРЅРєС†РёСЏ = ~w", [X, Res]),
 fail
 );
 Command = 2 -> (
-writeln("Введите X:"), readln(ListX), ListX = [X],
-writeln("Введите N:"), readln(ListN), ListN = [N],
+writeln("Р’РІРµРґРёС‚Рµ X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ N:"), readln(ListN), ListN = [N],
 formula(X, N, Res),
-format("X = ~w and N = ~w. Функция = ~w", [X, N, Res]),
+format("X = ~w and N = ~w. Р¤СѓРЅРєС†РёСЏ = ~w", [X, N, Res]),
 fail
 );
 Command = 3 -> (
-writeln("Введите X:"), readln(ListX), ListX = [X],
-writeln("Введите N:"), readln(ListN), ListN = [N],
+writeln("Р’РІРµРґРёС‚Рµ X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ N:"), readln(ListN), ListN = [N],
 test(X, N, ResFunc, ResFormula),
 format("\nWith X = ~w and N = ~w.", [X, N]),
 format("\nFunction Result = ~w", [ResFunc]),
@@ -84,26 +84,26 @@ format("\nFormula Result = ~w", [ResFormula]),
 format("\n"),
 fail
 );
-Command = 4 -> writeln("Выход"), !.
+Command = 4 -> writeln("Р’С‹С…РѕРґ"), !.
 
 
 func_check_neg([Command]) :-
 Command = 1 -> (
-writeln("Введите модуль X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ РјРѕРґСѓР»СЊ X:"), readln(ListX), ListX = [X],
 start_func((-X), Res),
-format("X = ~w. Функция = ~w", [(-X), Res]),
+format("X = ~w. Р¤СѓРЅРєС†РёСЏ = ~w", [(-X), Res]),
 fail
 );
 Command = 2 -> (
-writeln("Введите модуль X:"), readln(ListX), ListX = [X],
-writeln("Введите N:"), readln(ListN), ListN = [N],
+writeln("Р’РІРµРґРёС‚Рµ РјРѕРґСѓР»СЊ X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ N:"), readln(ListN), ListN = [N],
 formula((-X), N, Res),
-format("X = ~w and N = ~w. Функция = ~w", [(-X), N, Res]),
+format("X = ~w and N = ~w. Р¤СѓРЅРєС†РёСЏ = ~w", [(-X), N, Res]),
 fail
 );
 Command = 3 -> (
-writeln("Введите модуль X:"), readln(ListX), ListX = [X],
-writeln("Введите N:"), readln(ListN), ListN = [N],
+writeln("Р’РІРµРґРёС‚Рµ РјРѕРґСѓР»СЊ X:"), readln(ListX), ListX = [X],
+writeln("Р’РІРµРґРёС‚Рµ N:"), readln(ListN), ListN = [N],
 test((-X), N, ResFunc, ResFormula),
 format("\nWith X = ~w and N = ~w.", [(-X), N]),
 format("\nFunction Result = ~w", [ResFunc]),
@@ -111,13 +111,13 @@ format("\nFormula Result = ~w", [ResFormula]),
 format("\n"),
 fail
 );
-Command = 4 -> writeln("Выйти из режима работы с функцией"), !.
+Command = 4 -> writeln("Р’С‹Р№С‚Рё РёР· СЂРµР¶РёРјР° СЂР°Р±РѕС‚С‹ СЃ С„СѓРЅРєС†РёРµР№"), !.
 
 
 
 
-% Лаба_1
-% Задание простого двуместного предиката - родитель.
+% Р›Р°Р±Р°_1
+% Р—Р°РґР°РЅРёРµ РїСЂРѕСЃС‚РѕРіРѕ РґРІСѓРјРµСЃС‚РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - СЂРѕРґРёС‚РµР»СЊ.
 parent(dmitriy, sofia).
 parent(dmitriy, konstantin).
 parent(alfia, sofia).
@@ -129,20 +129,20 @@ parent(petr, maksim).
 parent(maksim, nadejda).
 parent(ekaterina, nadejda).
 
-% Задание простого одноместного предиката - мужчина.
+% Р—Р°РґР°РЅРёРµ РїСЂРѕСЃС‚РѕРіРѕ РѕРґРЅРѕРјРµСЃС‚РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РјСѓР¶С‡РёРЅР°.
 male(dmitriy).
 male(konstantin).
 male(maksim).
 male(petr).
 
-% Задание простого одноместного предиката - женщина.
+% Р—Р°РґР°РЅРёРµ РїСЂРѕСЃС‚РѕРіРѕ РѕРґРЅРѕРјРµСЃС‚РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - Р¶РµРЅС‰РёРЅР°.
 female(sofia).
 female(alfia).
 female(nadejda).
 female(yulia).
 female(ekaterina).
 
-% Задание простого двуместного предиката - возраст.
+% Р—Р°РґР°РЅРёРµ РїСЂРѕСЃС‚РѕРіРѕ РґРІСѓРјРµСЃС‚РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РІРѕР·СЂР°СЃС‚.
 age(sofia, 19).
 age(konstantin, 14).
 age(alfia, 44).
@@ -153,33 +153,33 @@ age(ekaterina, 49).
 age(yulia, 72).
 age(petr, 76).
 
-% Задание сложного предиката - мать.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РјР°С‚СЊ.
 mother(X, Y) :-
 female(X),
 parent(X, Y).
 % format("~w mother for ~w", [X, Y]).
 
-% Задание сложного предиката - отец.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РѕС‚РµС†.
 father(X, Y) :-
 male(X),
 parent(X, Y).
 % format("~w father for ~w", [X, Y]).
 
-% Задание сложного предиката - бабушка.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - Р±Р°Р±СѓС€РєР°.
 grandmother(X, Z) :-
 female(X),
 parent(X, Y),
 parent(Y, Z).
 % format("~w grandmother for ~w", [X, Z]).
 
-% Задание сложного предиката - дедушка.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РґРµРґСѓС€РєР°.
 grandfather(X, Z) :-
 male(X),
 parent(X, Y),
 parent(Y, Z).
 % format("~w grandfather for ~w", [X, Z]).
 
-% Задание сложного предиката - дядя.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - РґСЏРґСЏ.
 uncle(X, Y) :-
 male(X),
 parent(G, X),
@@ -188,7 +188,7 @@ parent(Z, Y),
 not(parent(X, Y)).
 % format("~w uncle for ~w", [X, Y]).
 
-% Задание сложного предиката - тетя.
+% Р—Р°РґР°РЅРёРµ СЃР»РѕР¶РЅРѕРіРѕ РїСЂРµРґРёРєР°С‚Р° - С‚РµС‚СЏ.
 aunt(X, Y) :-
 female(X),
 parent(G, X),
@@ -196,39 +196,39 @@ parent(G, Z),
 parent(Z, Y).
 % format("~w aunt for ~w", [X, Y]).
 
-% Цель 1 - "Альфия мать Софьи"
+% Р¦РµР»СЊ 1 - "РђР»СЊС„РёСЏ РјР°С‚СЊ РЎРѕС„СЊРё"
 goal1 :-
 writeln("Alfia is Sofia's mother :"),
 mother(alfia, sofia) ->
 writeln("Yes").
 
-% Цель 2 - "Надежда не дочь Альфии"
+% Р¦РµР»СЊ 2 - "РќР°РґРµР¶РґР° РЅРµ РґРѕС‡СЊ РђР»СЊС„РёРё"
 goal2 :-
 writeln("Alfia is not Nadejda's mother :"),
 not(mother(alfia, nadejda))->
 writeln("Yes").
 
-% Цель 3 - "Петр является отцом Максима и дедушкой Константина"
+% Р¦РµР»СЊ 3 - "РџРµС‚СЂ СЏРІР»СЏРµС‚СЃСЏ РѕС‚С†РѕРј РњР°РєСЃРёРјР° Рё РґРµРґСѓС€РєРѕР№ РљРѕРЅСЃС‚Р°РЅС‚РёРЅР°"
 goal3 :-
 writeln("Petr is Maksim's father and Konstantin's grandfather :"),
 parent(petr, maksim),
 grandfather(petr, konstantin) ->
 writeln("Yes").
 
-% Цель 4 - "Дмитрий является отцом, либо является дядей"
+% Р¦РµР»СЊ 4 - "Р”РјРёС‚СЂРёР№ СЏРІР»СЏРµС‚СЃСЏ РѕС‚С†РѕРј, Р»РёР±Рѕ СЏРІР»СЏРµС‚СЃСЏ РґСЏРґРµР№"
 goal4 :-
 writeln("Dmitiy is father or uncle :"),
 ( parent(dmitriy, _);
 uncle(dmitriy, _) )->
 writeln("Yes").
 
-% Цель 5 - Кто является внуком Юлии?
+% Р¦РµР»СЊ 5 - РљС‚Рѕ СЏРІР»СЏРµС‚СЃСЏ РІРЅСѓРєРѕРј Р®Р»РёРё?
 goal5 :-
 writeln("Who is Yulia's grandchild:"),
 grandmother(yulia, X),
 format("Yulia is grandmother for ~w\n", [X]).
 
-% Цель 6 - Надежда старше 20 лет?
+% Р¦РµР»СЊ 6 - РќР°РґРµР¶РґР° СЃС‚Р°СЂС€Рµ 20 Р»РµС‚?
 goal6 :-
 writeln("Nadejda is older than 20 :"),
 (age(nadejda, X),
@@ -242,20 +242,20 @@ writeln("Yes").
 %
 %
 %
-% Лаба_2
-% Вариант 12
-% Функция: sh x
-% Ограниение: |x| < inf
-% Приближенная формула: x + x^3/3! + x^5/5!...+... x^(2n+1)/(2n+1)! + ...
+% Р›Р°Р±Р°_2
+% Р’Р°СЂРёР°РЅС‚ 12
+% Р¤СѓРЅРєС†РёСЏ: sh x
+% РћРіСЂР°РЅРёРµРЅРёРµ: |x| < inf
+% РџСЂРёР±Р»РёР¶РµРЅРЅР°СЏ С„РѕСЂРјСѓР»Р°: x + x^3/3! + x^5/5!...+... x^(2n+1)/(2n+1)! + ...
 
-% Расчет формулы точным способом
+% Р Р°СЃС‡РµС‚ С„РѕСЂРјСѓР»С‹ С‚РѕС‡РЅС‹Рј СЃРїРѕСЃРѕР±РѕРј
 start_func(X, Res) :-
 Y is abs(X),
 not(number(X)) -> format("Error: ~w is not number", [X]), fail;
 %Y > inf -> format("Error: ~w is more than inf", [X]), fail;
 Res is sinh(X).
 
-% Расчет n-го коэффициента
+% Р Р°СЃС‡РµС‚ n-РіРѕ РєРѕСЌС„С„РёС†РёРµРЅС‚Р°
 coef(N, Res) :-
 N = 1 -> Res is 1/6;
 N > 1 -> (
@@ -264,7 +264,7 @@ coef(K, ResLast),
 Res is ResLast / ((2*N + 1) * (2 * N))
 ).
 
-% Расчет приближеной формулы с точностью до N
+% Р Р°СЃС‡РµС‚ РїСЂРёР±Р»РёР¶РµРЅРѕР№ С„РѕСЂРјСѓР»С‹ СЃ С‚РѕС‡РЅРѕСЃС‚СЊСЋ РґРѕ N
 formula(X, N, Res) :-
 Y is abs(X),
 not(number(X)) -> format("Error: ~w is not number", [X]), fail;
@@ -282,7 +282,7 @@ Res is Dop_1 + Dop_res
 )
 ).
 
-% Тест
+% РўРµСЃС‚
 test(X, N, ResFunc, ResFormula) :-
 start_func(X, ResFunc),
 formula(X, N, ResFormula),
